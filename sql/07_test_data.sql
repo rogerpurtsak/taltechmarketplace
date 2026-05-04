@@ -46,26 +46,48 @@ VALUES (
 INSERT INTO messages (conversation_id, sender_id, content)
 VALUES ('44444444-4444-4444-4444-444444444444', '22222222-2222-2222-2222-222222222222', 'Hi! Is this book still available?');
 
--- 7. Oskar makes a formal Price Offer
-INSERT INTO offers (id, listing_id, conversation_id, buyer_id, offered_price, status)
+-- 7. Oskar makes a formal Price Offer and Malle accepts it
+INSERT INTO offers (
+    id,
+    listing_id,
+    conversation_id,
+    buyer_id,
+    offered_price,
+    status,
+    responded_at
+)
 VALUES (
-    '55555555-5555-5555-5555-555555555555', 
-    '33333333-3333-3333-3333-333333333333', 
-    '44444444-4444-4444-4444-444444444444', 
-    '22222222-2222-2222-2222-222222222222', 
-    12.00, 
-    'accepted'
+    '55555555-5555-5555-5555-555555555555',
+    '33333333-3333-3333-3333-333333333333',
+    '44444444-4444-4444-4444-444444444444',
+    '22222222-2222-2222-2222-222222222222',
+    12.00,
+    'accepted',
+    now()
 );
 
 -- 8. The offer is accepted, creating the final Order
-INSERT INTO orders (listing_id, offer_id, buyer_id, seller_id, final_price, delivery_method, payment_method, status)
+INSERT INTO orders (
+    listing_id,
+    offer_id,
+    buyer_id,
+    seller_id,
+    final_price,
+    delivery_method,
+    payment_method,
+    status,
+    confirmed_at,
+    completed_at
+)
 VALUES (
-    '33333333-3333-3333-3333-333333333333', 
-    '55555555-5555-5555-5555-555555555555', 
-    '22222222-2222-2222-2222-222222222222', 
-    '11111111-1111-1111-1111-111111111111', 
-    12.00, 
-    'pickup', 
-    'cash', 
-    'completed'
+    '33333333-3333-3333-3333-333333333333',
+    '55555555-5555-5555-5555-555555555555',
+    '22222222-2222-2222-2222-222222222222',
+    '11111111-1111-1111-1111-111111111111',
+    12.00,
+    'pickup',
+    'cash',
+    'completed',
+    now(),
+    now()
 );
