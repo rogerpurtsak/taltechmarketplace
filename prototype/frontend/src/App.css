@@ -1,0 +1,52 @@
+.app {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: #003087;
+  color: white;
+  padding: 1.25rem 2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0.2rem 0 0;
+  opacity: 0.75;
+  font-size: 0.875rem;
+}
+
+.app-main {
+  padding: 2rem;
+  max-width: 900px;
+}
+
+.status-card {
+  background: white;
+  border: 1px solid #dde2e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 420px;
+}
+
+.status-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status--checking { color: #888; }
+.status--ok { color: #1a7a1a; font-weight: 600; }
+.status--error { color: #c0392b; font-weight: 600; }
+
+.hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: #888;
+}
